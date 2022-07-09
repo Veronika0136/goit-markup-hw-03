@@ -17,23 +17,51 @@ body {
   color: var(--main-txt-cl);
 }
 /* reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 .link {
   text-decoration: none;
   color: currentColor;
 }
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .subtitle {
   color: var(--subtitle-txt-cl);
 }
+/* base styles  */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 /* Header section */
+.header-container {
+  display: flex;
+  align-items: center;
+}
 .header-logo {
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
   line-height: calc(31 / 26);
   letter-spacing: 0.03em;
+  margin-right: 93px;
 }
 .logo-light {
   color: #ffffff;
@@ -41,9 +69,11 @@ body {
 .logo-dark {
   color: #000000;
 }
-
 .log {
   color: var(--accent-txt-cl);
+}
+.header-nav {
+  margin-right: auto;
 }
 .header-nav-list {
   font-weight: 500;
@@ -51,22 +81,37 @@ body {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
   color: var(--subtitle-txt-cl);
+  display: flex;
+  gap: 50px;
 }
-.header-nav-link:focus,
-.header-nav-link:hover,
-.header-link:hover,
-.header-link:focus {
+
+.header-nav-link-current {
   color: var(--accent-txt-cl);
 }
+
+.header-nav-item:focus,
+.header-nav-item:hover,
+.header-item:focus,
+.header-item:hover {
+  color: var(--accent-txt-cl);
+  cursor: pointer;
+}
+
+.header-nav-item,
+.header-item {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
 .header-list {
   font-weight: 500;
   font-size: 14px;
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
+  display: flex;
+  gap: 50px;
 }
-.header-nav-link-current {
-  color: var(--accent-txt-cl);
-}
+
 /* Hero section */
 .hero {
   background: var(--dark-bg-cl);
@@ -86,12 +131,15 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: calc(30 / 16);
-
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
   cursor: pointer;
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 32px;
+  border-radius: 4px;
 }
 .btn:hover,
 .btn:focus {
