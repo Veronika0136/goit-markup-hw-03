@@ -49,11 +49,16 @@ p {
   outline: 2px solid red;
   outline-offset: -2px;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
 /* Header section */
 .header-container {
   display: flex;
   align-items: center;
+  border-bottom: 1px solid #ececec;
 }
 .header-logo {
   font-family: 'Raleway';
@@ -89,16 +94,16 @@ p {
   color: var(--accent-txt-cl);
 }
 
-.header-nav-item:focus,
-.header-nav-item:hover,
-.header-item:focus,
-.header-item:hover {
+.header-nav-link:focus,
+.header-nav-link:hover,
+.header-link:hover,
+.header-link:focus {
   color: var(--accent-txt-cl);
-  cursor: pointer;
 }
 
-.header-nav-item,
-.header-item {
+.header-nav-link,
+.header-link {
+  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -147,7 +152,15 @@ p {
   background: #188ce8;
 }
 /* Features section */
+.features-list {
+  display: flex;
+  gap: 30px;
+}
+.features-list-item {
+  flex-basis: 270px;
+}
 .features-subtitle {
+  margin-bottom: 10px;
   font-weight: 700;
   font-size: 14px;
   line-height: calc(16 / 14);
@@ -161,11 +174,16 @@ p {
 }
 /* Specialization section */
 .title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: calc(42 / 36);
   text-align: center;
   letter-spacing: 0.03em;
+}
+.special-list {
+  display: flex;
+  gap: 30px;
 }
 /* Team section */
 .team {
