@@ -238,6 +238,7 @@ img {
 .footer {
   background-color: var(--dark-bg-cl);
 }
+
 .footer-list {
   font-style: normal;
   font-size: 14px;
@@ -246,6 +247,7 @@ img {
 }
 .footer-list-txt {
   color: #ffffff;
+  margin-bottom: 9px;
 }
 .footer-list-link {
   color: rgba(255, 255, 255, 0.6);
@@ -267,6 +269,11 @@ img {
 .btn-current {
   background-color: var(--accent-txt-cl);
   color: #ffffff;
+}
+
+.portfolio-list {
+  --itens: 3;
+  padding: 0px;
 }
 .portfolio-subtitle {
   font-weight: 700;
