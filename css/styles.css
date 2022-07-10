@@ -10,6 +10,8 @@
   --dark-bg-cl: #2f303a;
   --light-bg-cl: #f5f4fa;
   /* others */
+  --indent: 30px;
+  --itens: 4;
 }
 
 body {
@@ -25,6 +27,9 @@ h5,
 h6,
 p {
   margin: 0;
+}
+img {
+  display: block;
 }
 .link {
   text-decoration: none;
@@ -189,7 +194,22 @@ p {
 .team {
   background-color: var(--light-bg-cl);
 }
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.team-list-item {
+  flex-basis: calc((100%- var(--indent) * (var(--itens)-1)) / var(--itens));
+}
+.team-wrapper {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+}
 .team-name {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: calc(19 / 16);
