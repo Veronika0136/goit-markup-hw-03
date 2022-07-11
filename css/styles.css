@@ -146,6 +146,7 @@ img {
 /* Hero section */
 .hero {
   background: var(--dark-bg-cl);
+  padding: 200px 0;
 }
 .hero-title {
   font-weight: 900;
@@ -185,6 +186,9 @@ img {
   background: #188ce8;
 }
 /* Features section */
+.features .section {
+  padding-bottom: 0;
+}
 .features-list {
   display: flex;
   gap: 30px;
@@ -202,7 +206,7 @@ img {
 }
 .features-txt {
   font-size: 14px;
-  line-height: calc(42 / 14);
+  line-height: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 /* Specialization section */
@@ -269,8 +273,12 @@ img {
 }
 .footer-address-txt {
   color: #ffffff;
+  margin-bottom: 9px;
 }
 .footer-address-list-item {
+  margin-top: 9px;
+}
+.footer-address-list-item:not(:first-child) {
   margin-top: 9px;
 }
 .footer-address-list-item-link {
@@ -281,9 +289,8 @@ img {
 .portfolio-filtr {
   display: flex;
   justify-content: center;
-  padding: 0;
   gap: 8px;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
 }
 .portfolio-filtr-btn {
   background: var(--light-bg-cl);
@@ -311,11 +318,12 @@ img {
   padding: 0px;
 }
 .portfolio-wrapper {
-  padding-top: 26px;
+  padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
-  background: #ffffff;
+  padding-right: 24px;
   border: 1px solid #eeeeee;
+  border-top: none;
 }
 .portfolio-subtitle {
   font-weight: 700;
