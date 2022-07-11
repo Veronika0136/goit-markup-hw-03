@@ -43,6 +43,19 @@ img {
 .subtitle {
   color: var(--subtitle-txt-cl);
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* card set */
 .card-set {
   display: flex;
@@ -59,9 +72,6 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 2px solid red;
-  outline-offset: -2px;
 }
 .section {
   padding-top: 94px;
@@ -267,8 +277,14 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* Portfolio sectuion
- */
+/* Portfolio sectuion */
+.portfolio-filtr {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 8px;
+  margin-bottom: 34px;
+}
 .portfolio-filtr-btn {
   background: var(--light-bg-cl);
   font-family: inherit;
@@ -279,6 +295,10 @@ img {
   letter-spacing: 0.03em;
   cursor: pointer;
   color: #212121;
+  display: flex;
+  padding: 6px 22px;
+  border-radius: 4px;
+  border: var(--light-bg-cl);
 }
 .portfolio-filtr-btn:active,
 .btn-current {
@@ -289,6 +309,13 @@ img {
 .portfolio-list {
   --itens: 3;
   padding: 0px;
+}
+.portfolio-wrapper {
+  padding-top: 26px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
 }
 .portfolio-subtitle {
   font-weight: 700;
